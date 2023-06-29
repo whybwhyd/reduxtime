@@ -1,6 +1,5 @@
-import React from 'react';
+import React,{useState}from 'react';
 import { styled } from 'styled-components';
-import todos from"../redux/modules/todos";
 
 
 const HeadTitle= styled.h1`
@@ -13,7 +12,8 @@ const DoneBox= styled.div`
   border:2px solid black;
 `
 function Main() {
-
+  const [title,setTitle] = useState("")
+  const [body,setBody] = useState("")
   return (
     <div>
       <HeadTitle>TODOLIST</HeadTitle>
@@ -26,15 +26,15 @@ function Main() {
       <div>
         <TodoBox>
           TODO
-          {todos.title}
-          {todos.body}
+          {title}
+          {body}
         </TodoBox>
       </div>
       <div>
         <DoneBox>
           DONE
-          {todos.title}
-          {todos.body}
+          {title}
+          {body}
         </DoneBox>
       </div>
 

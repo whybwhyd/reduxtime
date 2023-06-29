@@ -1,5 +1,5 @@
 import shortid from "shortid";
-import {useState} from 'react';
+
 
 const initialState=[
     {id:shortid.generate(),
@@ -23,8 +23,7 @@ const initialState=[
     isDone:false,
     },
     ]
-  const [title,setTitle] = useState("")
-  const [body,setBody] = useState("")
+
 
     const todos = (state=initialState,action)=>{
         switch(action.type){
